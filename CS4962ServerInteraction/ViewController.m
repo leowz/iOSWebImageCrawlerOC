@@ -75,7 +75,7 @@
 
 - (void)populateImageArrayByRegex:(NSString *)stringData {
     
-    NSString *pattern = @"src=\"(https?:\\/\\/.*\\.(?:png|jpg))\"";
+    NSString *pattern = @"src=\"(https?:\\/\\/.*?\\.(?:png|jpg|gif))";
     NSError* error = nil;
     NSRange rangeOfString = NSMakeRange(0, [stringData length]);
     NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
